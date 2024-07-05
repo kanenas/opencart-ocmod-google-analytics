@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<id><![CDATA[Google Analytics (Default & Journal3 theme)]]></id>
+	<name><![CDATA[Google Analytics (Default & Journal3 theme)]]></name>
+	<code>knns-google-analytics</code>
+	<version>1.0.0</version>
+	<author><![CDATA[<font color="#7F458C"><b>kanenas.net (aka Nikolas Branis)</b></font> - nbran@kanenas.net]]></author>
+	<link>https://kanenas.net/</link>
+	<file path="catalog/view/theme/*/template/common/header.twig" error="log">
+		<operation error="skip">
+			<search><![CDATA[<base href="{{ base }}" />]]></search>
+			<add position="after"><![CDATA[
+{# kanenas: knns-google-analytics.xml (start) << #}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+{# kanenas: knns-google-analytics.xml (end) << #}
+			]]></add>
+		</operation>
+	</file>
+</modification>
