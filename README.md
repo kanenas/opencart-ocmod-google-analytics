@@ -1,2 +1,2 @@
-# opencart-ocmod-google-analytics
-Google Analytics (Default &amp; Journal3 theme)
+# Google Analytics (Default &amp; Journal3 theme)
+**Opencart**: v3.x
